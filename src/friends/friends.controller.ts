@@ -13,7 +13,7 @@ export class FriendsController {
     return this.friendsService.sendFriendRequest(senderId, receiverId);
   }
 
-  @Patch('accept/:requestId')
+  @Post('accept/:requestId')
   async acceptFriendRequest(@Param('requestId') requestId: number) {
     return this.friendsService.acceptFriendRequest(requestId);
   }
